@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar is-fixed-top navbar-transparent"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <p class="nav-brand">FIT<span class="nav-logo">ME</span></p>
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            <p>Schedule</p>
+          </a>
+          <a class="navbar-item">
+            <p>Overview</p>
+          </a>
+          <a class="navbar-item">
+            <p>Articles</p>
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a class="icons">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="25"
+                height="25"
+                viewBox="0 0 172 172"
+                style="fill: #000000;"
+              >
+                <g
+                  fill="none"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal;"
+                >
+                  <path d="M0,172v-172h172v172z" fill="none"></path>
+                  <g fill="#ffffff">
+                    <path
+                      d="M0,24.08v3.44v120.4h172v-123.84zM6.88,30.96h158.24v8.62015c-1.45955,1.27213 -62.56052,54.52441 -67.64437,58.95031c-4.46219,3.88469 -9.00804,4.67625 -11.47563,4.67625c-2.46513,0 -7.01279,-0.79099 -11.47563,-4.67625c-5.08386,-4.42591 -66.18483,-57.67818 -67.64437,-58.95031zM6.88,48.67735c8.38663,7.31058 58.36871,50.88289 63.1361,55.03328c5.85028,5.09314 12.04375,6.36265 15.9839,6.36265c3.93769,0 10.13297,-1.26894 15.9839,-6.36265c4.76737,-4.15038 54.74912,-47.71657 63.1361,-55.02656v92.35594h-158.24z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="main-area">
+        <div class="container is-fluid">
+          <div class="columns is-desktop is-centered">
+            <div class="column">
+              <p class="hero-area-text">
+                Let us find you perfect
+                <span class="hero-area-text-two">fitness</span> classes !
+              </p>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-half-desktop is-full-mobile">
+              <div class="field is-grouped is-full-mobile">
+                <p class="control is-expanded">
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Enter your location"
+                  />
+                </p>
+                <p class="control">
+                  <button class="button button-color">Search</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container is-fluid">
+        <div class="columns is-centered">
+          <div class="tabs is-toggle is-fullwidth is-large tab-list">
+            <ul>
+              <li
+                class="tab card-view-hover is-active"
+                onclick="openTab(event,'yoga')"
+              >
+                <span class="card-view">
+                  <span class="icon-width card-view">
+                    <span class="tab-icon">
+                      <img
+                        src="https://img.icons8.com/pastel-glyph/50/000000/yoga.png"
+                      />
+                    </span>
+                  </span>
+                  <span class="tab-text">Yoga</span>
+                </span>
+              </li>
+              <li
+                class="tab card-view-hover"
+                onclick="openTab(event,'fitness')"
+              >
+                <span class="card-view">
+                  <span class="icon-width card-view">
+                    <span class="tab-icon">
+                      <img
+                        src="https://img.icons8.com/ios/50/000000/barbell.png"
+                    /></span>
+                  </span>
+                  <span class="tab-text">Fitness</span>
+                </span>
+              </li>
+              <li class="tab card-view-hover" onclick="openTab(event,'dance')">
+                <span class="card-view">
+                  <span class="icon-width card-view">
+                    <span class="tab-icon"
+                      ><img
+                        src="https://img.icons8.com/ios/50/000000/tango.png"
+                    /></span>
+                  </span>
+                  <span class="tab-text">Dance</span>
+                </span>
+              </li>
+              <li
+                class="tab card-view-hover"
+                onclick="openTab(event,'pilates')"
+              >
+                <span class="card-view">
+                  <span class="icon-width card-view">
+                    <span class="tab-icon">
+                      <img
+                        src="https://img.icons8.com/ios/50/000000/pilates.png"
+                    /></span>
+                  </span>
+
+                  <span class="tab-text">Pilates</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yoga Tab -->
+      <div class="container is-fluid">
+        <div class="content-tab" id="yoga">
+          <div class="columns">
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image image-width">
+                        <img
+                          src="images/woman-squatting-on-ground-while-raising-both-hands-2035066.jpg"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">Free Squads</p>
+                      <p class="subtitle is-6">by Edwin</p>
+                      <p class="subtitle is-6">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-rating">
+                  <div class="card-rating-content">
+                    <p>
+                      <span class="card-rating-text">Club :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Partners :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Members :</span>
+                      <span>15000</span>
+                    </p>
+                  </div>
+                  <div class="buttons">
+                    <button class="button button-color">Scheducle</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image image-width">
+                        <img
+                          src="images/woman-meditating-on-rock-2597205.jpg"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">Perfect Exercise</p>
+                      <p class="subtitle is-6">by Sam Andreson</p>
+                      <p class="subtitle is-6">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-rating">
+                  <div class="card-rating-content">
+                    <p>
+                      <span class="card-rating-text">Club :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Partners :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Members :</span>
+                      <span>15000</span>
+                    </p>
+                  </div>
+                  <div class="buttons">
+                    <button class="button button-color">Scheducle</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Fitness Tab-->
+      <div class="container is-fluid">
+        <div class="content-tab" id="fitness" style="display: none;">
+          <div class="columns">
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image image-width">
+                        <img
+                          src="images/grayscale-photography-of-man-in-short-standiung-896059.jpg"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">Double Bar</p>
+                      <p class="subtitle is-6">by Will Smith</p>
+                      <p class="subtitle is-6">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-rating">
+                  <div class="card-rating-content">
+                    <p>
+                      <span class="card-rating-text">Club :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Partners :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Members :</span>
+                      <span>15000</span>
+                    </p>
+                  </div>
+                  <div class="buttons">
+                    <button class="button button-color">Scheducle</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image image-width">
+                        <img
+                          src="images/man-doing-crossfit-training-4164514.jpg"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">Leg Press</p>
+                      <p class="subtitle is-6">by Abilash</p>
+                      <p class="subtitle is-6">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-rating">
+                  <div class="card-rating-content">
+                    <p>
+                      <span class="card-rating-text">Club :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Partners :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Members :</span>
+                      <span>15000</span>
+                    </p>
+                  </div>
+                  <div class="buttons">
+                    <button class="button button-color">Scheducle</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Dance-->
+      <div class="container is-fluid">
+        <div class="content-tab" id="dance" style="display: none;">
+          <div class="columns">
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image image-width">
+                        <img
+                          src="images/dancing-man-wearing-pants-and-long-sleeved-shirt-1701194.jpg"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">Salsa</p>
+                      <p class="subtitle is-6">by Robert Smith</p>
+                      <p class="subtitle is-6">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-rating">
+                  <div class="card-rating-content">
+                    <p>
+                      <span class="card-rating-text">Club :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Partners :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Members :</span>
+                      <span>15000</span>
+                    </p>
+                  </div>
+                  <div class="buttons">
+                    <button class="button button-color">Scheducle</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image image-width">
+                        <img
+                          src="images/active-dance-dancer-dancing-270789.jpg"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">Hip Hop</p>
+                      <p class="subtitle is-6">by Michale Smith</p>
+                      <p class="subtitle is-6">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-rating">
+                  <div class="card-rating-content">
+                    <p>
+                      <span class="card-rating-text">Club :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Partners :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Members :</span>
+                      <span>15000</span>
+                    </p>
+                  </div>
+                  <div class="buttons">
+                    <button class="button button-color">Scheducle</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Pilates-->
+      <div class="container is-fluid">
+        <div class="content-tab" id="pilates" style="display: none;">
+          <div class="columns columns-gap">
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image image-width">
+                        <img
+                          src="images/flexible-athlete-performing-shoulder-stand-in-contemporary-3755018.jpg"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">Stretch</p>
+                      <p class="subtitle is-6">by Norman Henry</p>
+                      <p class="subtitle is-6">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-rating">
+                  <div class="card-rating-content">
+                    <p>
+                      <span class="card-rating-text">Club :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Partners :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Members :</span>
+                      <span>15000</span>
+                    </p>
+                  </div>
+                  <div class="buttons">
+                    <button class="button button-color">Scheducle</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image image-width">
+                        <img
+                          src="images/photo-of-woman-stretching-her-body-1812964.jpg"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">Leg Stretch</p>
+                      <p class="subtitle is-6">by Hendry Ford</p>
+                      <p class="subtitle is-6">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-rating">
+                  <div class="card-rating-content">
+                    <p>
+                      <span class="card-rating-text">Club :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Partners :</span>
+                      <span>Health Forge</span>
+                    </p>
+                    <p>
+                      <span class="card-rating-text">Members :</span>
+                      <span>15000</span>
+                    </p>
+                  </div>
+                  <div class="buttons">
+                    <button class="button button-color">Scheducle</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

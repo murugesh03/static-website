@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --themeColor: #7d77e1;
+}
+
+/* Nav Logo */
+.nav-brand {
+  margin: 0 0.2rem;
+}
+.nav-logo {
+  color: var(--themeColor);
+}
+.fa-envelope {
+  color: black;
+}
+.nav-bar-color {
+  background-color: black;
+}
+.navbar-transparent {
+  background-color: transparent;
+}
+a > p,
+.fa-envelope-o {
+  color: white;
+}
+.fa {
+  font-size: 20px !important;
+}
+
+/* Main Area */
+.main-area {
+  background-image: url("images/workout-713658_1280.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.hero-area-text {
+  text-align: center;
+  padding: 12rem 0 1rem;
+  color: white;
+  font-size: 37px;
+}
+.hero-area-text-two {
+  color: #7b965a;
+  font-family: "Darker Grotesque", sans-serif;
+}
+.button-color {
+  color: white;
+  background-color: var(--themeColor);
+  padding: 0 4rem;
+}
+
+/* Tabs */
+.tab-icon img {
+  padding: 0.5rem 0;
+}
+.tab-icon {
+  width: 80px;
+  height: 60px;
+  color: black;
+  text-align: center;
+}
+.card-view-hover:hover {
+  transform: scale(1);
+  border-bottom: 2px solid var(--themeColor);
+}
+.tab-list {
+  transform: translateY(-70px);
+}
+
+.tab-text {
+  text-align: center;
+}
+.columns-gap {
+  margin-top: 3rem;
+}
+.image-width {
+  width: 120px;
+}
+.card-view {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.icon-width {
+  height: auto;
+  width: auto;
+  padding: 1rem 3rem;
+}
+.card-rating {
+  display: flex;
+  justify-content: space-between;
+}
+.card-rating-content {
+  margin: 1rem;
+}
+.card-rating-text {
+  font-weight: 600;
+}
+.button-color {
+  padding: 0 3rem;
+  background-color: var(--themeColor);
+  color: white;
+  margin: 0 1rem;
+}
