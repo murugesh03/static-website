@@ -109,3 +109,13 @@ a > p,
   color: white;
   margin: 0 1rem;
 }
+/* Media Query */
+@media (min-width: 320px) and (max-width: 480px) {
+  .field-mobile {
+    display: block !important;
+  }
+  .button-mobile {
+    text-align: center !important;
+    margin: 1rem 0;
+  }
+}
